@@ -12,9 +12,7 @@
 
 <h2>Comments:</h2>
 <div id="comments">
-	<% @post.comments.each do |comment| %>
-		<%= render :partial=> @post.comments.reverse %>	
-	<% end %>
+	<%= render :partial=> @post.comments.reverse %>	
 </div>
 
 <%= form_for([@post, Comment.new], remote: true) do |f| %>
